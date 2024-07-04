@@ -13,6 +13,16 @@ SELECT category, COUNT(*) AS purchase_count
 FROM purchases
 GROUP BY category;
 
+Excercise 3:
+SELECT *
+FROM purchases
+WHERE purchase_date IS NULL
+   OR purchase_time IS NULL
+   OR location IS NULL
+   OR category IS NULL
+   OR amount IS NULL
+   OR payment_type IS NULL;
+
 Exercise 4:
 SELECT category, SUM(amount) AS total_sales
 FROM purchases
